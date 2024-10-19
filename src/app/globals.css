@@ -1,0 +1,58 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background-app-rgb: 244, 245, 247;
+  }
+}
+
+@layer components {
+  .dot {
+    @apply absolute w-[15px] h-[15px] bg-[#80B2FF] rounded-full opacity-80 hover:opacity-100 hover:bg-[#7bc97e];
+  }
+  .btn {
+    @apply border-2 bg-white font-medium border-gray-600 transition-colors py-2 px-9 cursor-pointer hover:border-[#84B469] hover:bg-[#D5E8D4];
+  }
+  
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: var(--vazir-font);
+  min-height: 100vh;
+  user-select: none;
+  background-color: var(--background-app-rgb);
+}
+.container {
+  position: relative;
+  padding-left: 20px;
+}
+
+.sidebar {
+  width: 60px;
+  transition: width 0.3s ease;
+}
+
+.sidebar.expanded {
+  width: 200px;
+  transition: width 0.1s ease;
+}
+
+.sidebar-nav {
+  padding: 10px;
+}
+
+.sidebar-nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.sidebar-nav li {
+  margin: 10px 0;
+  width: 150px;
+  transition: width 0.1s ease;
+}
